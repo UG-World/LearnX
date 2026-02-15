@@ -11,10 +11,33 @@ body {
     font-family: Arial, sans-serif;
     background: #0f172a;
     color: white;
+}
+
+/* NAVBAR */
+nav {
+    background: #020617;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Center Wrapper */
+.wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: calc(100vh - 70px);
 }
 
 /* Form Container */
@@ -80,23 +103,34 @@ button:hover {
 
 <body>
 
-<div class="container">
-    <h2>Contact LearnX</h2>
+<!-- NAVIGATION -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="features.html">Features</a>
+    <a href="community.html">Community</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
-    <form id="contactForm" action="https://formspree.io/f/maqdopen" method="POST">
-        
-        <input type="text" name="firstName" placeholder="First Name" required>
+<div class="wrapper">
+    <div class="container">
+        <h2>Contact LearnX</h2>
 
-        <input type="text" name="classStream" placeholder="Class / Stream & Board" required>
+        <form id="contactForm" action="https://formspree.io/f/maqdopen" method="POST">
+            
+            <input type="text" name="firstName" placeholder="First Name" required>
 
-        <input type="email" name="email" placeholder="Gmail Address" required>
+            <input type="text" name="classStream" placeholder="Class / Stream & Board" required>
 
-        <textarea name="question" placeholder="Your Doubt / Question" required></textarea>
+            <input type="email" name="email" placeholder="Gmail Address" required>
 
-        <input type="text" name="social" placeholder="Any Social Media Account" required>
+            <textarea name="question" placeholder="Your Doubt / Question" required></textarea>
 
-        <button type="submit">Send Message 🚀</button>
-    </form>
+            <input type="text" name="social" placeholder="Any Social Media Account" required>
+
+            <button type="submit">Send Message 🚀</button>
+        </form>
+    </div>
 </div>
 
 <div class="rocket" id="rocket">🚀</div>
