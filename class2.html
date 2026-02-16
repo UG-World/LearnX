@@ -65,17 +65,24 @@ h1{
 }
 
 .back-btn{
-    display:block;
-    width:120px;
-    margin:30px auto 0;
-    padding:10px;
-    text-align:center;
-    background:#22c55e;
+    position:fixed;
+    top:20px;
+    right:20px;
+    padding:10px 16px;
+    background:#38bdf8; /* apni class ke hisab se color change kar sakte ho */
     color:#000;
     border-radius:8px;
     text-decoration:none;
     font-weight:bold;
+    z-index:1000;
+    box-shadow:0 4px 10px rgba(0,0,0,0.4);
+    transition:0.3s;
 }
+
+.back-btn:hover{
+    transform:scale(1.05);
+}
+
 </style>
 </head>
 
