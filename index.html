@@ -3,94 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LearnX by UG Worlds</title>
+
+<title>LearnX by UG Worlds | NCERT Books, Toppers Strategy & Exam Guidance</title>
+
+<meta name="description" content="LearnX by UG Worlds provides structured NCERT resources (Class 1–12), topper strategies, exam interviews, and organized academic guidance in one platform.">
+<meta name="keywords" content="NCERT Books, Class 1 to 12, JEE Toppers, NEET Toppers, CBSE Toppers, ICSE Toppers, Board Exam Strategy">
+<meta name="author" content="UG Worlds">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="LearnX by UG Worlds">
+<meta property="og:description" content="Structured Academic & Competitive Exam Platform with NCERT, Toppers Strategy & Guidance.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <style>
-* {
+
+/* RESET */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     background: #0f172a;
     color: #f1f5f9;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* NAVBAR */
 nav {
     background: #020617;
-    padding: 15px 10px;
+    padding: 16px 12px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 18px;
 }
 
 nav a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
-    padding: 5px 10px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.25s ease;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav a:hover,
+nav a:focus {
+    background: #1e293b;
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 60px 20px;
-    background: #111827;
+    padding: 70px 20px;
+    background: linear-gradient(to bottom, #111827, #0f172a);
 }
 
 .hero h1 {
-    font-size: clamp(26px, 5vw, 40px);
+    font-size: clamp(28px, 5vw, 42px);
     margin: 0;
     color: #38bdf8;
 }
 
 .hero p {
-    max-width: 800px;
-    margin: 20px auto;
-    font-size: clamp(14px, 2.5vw, 18px);
+    max-width: 820px;
+    margin: 20px auto 0;
+    font-size: clamp(15px, 2.4vw, 18px);
 }
 
 /* SECTION */
 .section {
     max-width: 1200px;
     margin: auto;
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
 
 .section h2 {
     text-align: center;
     margin-bottom: 40px;
     color: #3b82f6;
-    font-size: clamp(20px, 4vw, 28px);
+    font-size: clamp(22px, 4vw, 30px);
 }
 
-/* FIXED GRID */
+/* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 28px;
-    margin-top: 30px;
 }
 
 /* CARD */
 .card {
     background: #1e293b;
-    padding: 20px;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
+    padding: 22px;
+    border-radius: 14px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 .card h3 {
@@ -103,27 +124,30 @@ nav a:hover {
     text-decoration: none;
     display: block;
     margin: 6px 0;
-    word-wrap: break-word;
+    word-break: break-word;
+    font-size: 14px;
 }
 
 .card a:hover {
     text-decoration: underline;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 22px;
     background: #020617;
     font-size: 14px;
 }
 
-/* MOBILE */
+/* MOBILE OPTIMIZATION */
 @media (max-width: 600px) {
     nav { gap: 10px; }
-    .hero { padding: 40px 15px; }
-    .section { padding: 40px 15px; }
+    .hero { padding: 50px 16px; }
+    .section { padding: 50px 16px; }
     .card { padding: 18px; }
 }
+
 </style>
 </head>
 
@@ -163,11 +187,10 @@ exam guidance, topper strategies, and trusted academic references — all in one
 <h3>Secondary (6–8)</h3>
 <a href="Class6.html">Class 6</a>
 <a href="Class7.html">Class 7</a>
-<a herf="Class8.html">Class 8</a>
-<a href="Class9,html">Class 9</a>
+<a href="Class8.html">Class 8</a>
+<a href="Class9.html">Class 9</a>
 <a href="class10.html">Class 10</a>
 </div>
-
 
 <div class="card">
 <h3>Higher Secondary (11–12)</h3>
@@ -184,35 +207,47 @@ exam guidance, topper strategies, and trusted academic references — all in one
 <h2>Topper Notes</h2>
 <div class="grid">
 
-<div class="card"><h3>Propper notes</h3>
-    <a href="proper-notes">Proper Notes</a>
+<div class="card">
+<h3>Propper notes</h3>
+<a href="proper-notes">Proper Notes</a>
 </div>
 
-<div class="card"><h3>Short notes</h3>
-    <a href="short-notes">Short Notes</a>
+<div class="card">
+<h3>Short notes</h3>
+<a href="short-notes">Short Notes</a>
 </div>
 
-<div class="card"><h3>Revision notes</h3>
-    <a href="revision-notes">Revision Notes</a>
+<div class="card">
+<h3>Revision notes</h3>
+<a href="revision-notes">Revision Notes</a>
 </div>
-    
+
+</div>
+</div>
+
 <!-- UG World Notes -->
 <div class="section">
 <h2>UG World Notes</h2>
 <div class="grid">
 
-<div class="card"><h3>Propper notes</h3>
-    <a href="proper-notes-ug">Proper Notes</a>
+<div class="card">
+<h3>Propper notes</h3>
+<a href="proper-notes-ug">Proper Notes</a>
 </div>
 
-<div class="card"><h3>Short notes</h3>
-    <a href="short-notes-ug">Short Notes</a>
+<div class="card">
+<h3>Short notes</h3>
+<a href="short-notes-ug">Short Notes</a>
 </div>
 
-<div class="card"><h3>Revision notes</h3>
-    <a href="revision-notes-ug">Revision Notes</a>
+<div class="card">
+<h3>Revision notes</h3>
+<a href="revision-notes-ug">Revision Notes</a>
 </div>
-    
+
+</div>
+</div>
+
 <!-- TOPPER SECTION -->
 <div class="section">
 <h2>Topper Strategy & Interviews</h2>
