@@ -1,5 +1,3 @@
-bro repair this file and isme top level ka seo kar do iske koi bhi code cedna mat bas css ko repair ka do
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,13 +10,27 @@ bro repair this file and isme top level ka seo kar do iske koi bhi code cedna ma
 <meta name="keywords" content="NCERT Books, Class 1 to 12, JEE Toppers, NEET Toppers, CBSE Toppers, ICSE Toppers, Board Exam Strategy">
 <meta name="author" content="UG Worlds">
 <meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0f172a">
+<link rel="canonical" href="https://yourdomain.com/">
 
+<!-- Open Graph -->
 <meta property="og:title" content="LearnX by UG Worlds">
 <meta property="og:description" content="Structured Academic & Competitive Exam Platform with NCERT, Toppers Strategy & Guidance.">
 <meta property="og:type" content="website">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "LearnX by UG Worlds",
+  "url": "https://yourdomain.com",
+  "description": "Structured Academic & Competitive Exam Platform with NCERT, Toppers Strategy & Guidance."
+}
+</script>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
 <style>
 
@@ -27,6 +39,10 @@ bro repair this file and isme top level ka seo kar do iske koi bhi code cedna ma
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -40,12 +56,17 @@ body {
 
 /* NAVBAR */
 nav {
-    background: #020617;
+    background: rgba(2,6,23,0.95);
+    backdrop-filter: blur(8px);
     padding: 16px 12px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 18px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #1e293b;
 }
 
 nav a {
@@ -53,20 +74,20 @@ nav a {
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
-    padding: 6px 12px;
+    padding: 6px 14px;
     border-radius: 6px;
-    transition: background 0.25s ease;
+    transition: all 0.3s ease;
 }
 
-nav a:hover,
-nav a:focus {
+nav a:hover {
     background: #1e293b;
+    transform: translateY(-2px);
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 70px 20px;
+    padding: 80px 20px;
     background: linear-gradient(to bottom, #111827, #0f172a);
 }
 
@@ -108,15 +129,17 @@ nav a:focus {
     background: #1e293b;
     padding: 22px;
     border-radius: 14px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
 }
 
-.card h3 {
+.card h3,
+.card h2 {
     margin-top: 0;
     color: #38bdf8;
 }
@@ -134,18 +157,25 @@ nav a:focus {
     text-decoration: underline;
 }
 
+/* FIXED CARD LINK */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* FOOTER */
 footer {
     text-align: center;
     padding: 22px;
     background: #020617;
     font-size: 14px;
+    border-top: 1px solid #1e293b;
 }
 
-/* MOBILE OPTIMIZATION */
+/* MOBILE */
 @media (max-width: 600px) {
     nav { gap: 10px; }
-    .hero { padding: 50px 16px; }
+    .hero { padding: 60px 16px; }
     .section { padding: 50px 16px; }
     .card { padding: 18px; }
 }
@@ -437,8 +467,37 @@ exam guidance, topper strategies, and trusted academic references — all in one
 © 2026 LearnX by UG World | Structured Learning Platform
 </footer>
 
+<script>
+/* GSAP Animations */
+
+gsap.from(".hero h1", {
+    y: -40,
+    opacity: 0,
+    duration: 1
+});
+
+gsap.from(".hero p", {
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    delay: 0.3
+});
+
+gsap.from("nav a", {
+    opacity: 0,
+    y: -20,
+    duration: 0.6,
+    stagger: 0.1
+});
+
+gsap.to(".card", {
+    opacity: 1,
+    y: 0,
+    duration: 0.8,
+    stagger: 0.08,
+    ease: "power2.out"
+});
+</script>
+
 </body>
 </html>
-
-
-
