@@ -76,13 +76,50 @@ nav a {
     font-weight: 500;
     padding: 6px 14px;
     border-radius: 6px;
+    position: relative;
     transition: all 0.3s ease;
 }
 
-nav a:hover {
-    background: #1e293b;
-    transform: translateY(-2px);
 }
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #38bdf8;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 70%;
+}
+
+  nav a {
+    animation: navFade 0.6s ease forwards;
+    opacity: 0;
+}
+
+nav a:nth-child(1) { animation-delay: 0.1s; }
+nav a:nth-child(2) { animation-delay: 0.2s; }
+nav a:nth-child(3) { animation-delay: 0.3s; }
+nav a:nth-child(4) { animation-delay: 0.4s; }
+nav a:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes navFade {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* HERO */
 .hero {
@@ -242,7 +279,6 @@ exam guidance, topper strategies, and trusted academic references — all in one
 <a href="proper.notes" class="card-link">
     <div class="card">
         <h2>Proper Notes</h2>
-        <p>View all classes notes</p>
     </div>
 </a>
 
@@ -250,14 +286,12 @@ exam guidance, topper strategies, and trusted academic references — all in one
 <a href="short.notes" class="card-link">
     <div class="card">
         <h2>Short Notes</h2>
-        <p>View all classes notes</p>
     </div>
 </a>
 
 <a href="revision.notes" class="card-link">
     <div class="card">
         <h2>Revivion Notes</h2>
-        <p>View all classes notes</p>
     </div>
 </a>
 
@@ -272,7 +306,6 @@ exam guidance, topper strategies, and trusted academic references — all in one
 <a href="proper.notes" class="card-link">
     <div class="card">
         <h2>Proper Notes</h2>
-        <p>View all classes notes</p>
     </div>
 </a>
 
@@ -280,14 +313,12 @@ exam guidance, topper strategies, and trusted academic references — all in one
 <a href="short.notes" class="card-link">
     <div class="card">
         <h2>Short Notes</h2>
-        <p>View all classes notes</p>
     </div>
 </a>
 
 <a href="revision.notes" class="card-link">
     <div class="card">
         <h2>Revivion Notes</h2>
-        <p>View all classes notes</p>
     </div>
 </a>
     
@@ -483,11 +514,6 @@ gsap.from(".hero p", {
     delay: 0.3
 });
 
-gsap.from("nav a", {
-    opacity: 0,
-    y: -20,
-    duration: 0.6,
-    stagger: 0.1
 });
 
 gsap.to(".card", {
